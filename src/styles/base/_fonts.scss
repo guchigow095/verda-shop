@@ -1,0 +1,23 @@
+/* Подключаем вариативный шрифт CoFo Sans */
+@font-face {
+  font-family: 'CoFo Sans';
+  src: url('../fonts/CoFoSans_Variable.woff2') format('woff2-variations');
+  font-weight: 100 900; /* Диапазон весов для вариативного шрифта */
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Базовые настройки для всего сайта */
+body {
+  font-family: 'CoFo Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400; /* Обычный текст */
+}
+
+/* Настройка заголовков */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'CoFo Sans', sans-serif;
+  font-weight: 700;
+  margin: 0;
+}

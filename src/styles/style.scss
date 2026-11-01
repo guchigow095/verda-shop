@@ -1,20 +1,8 @@
-body {
-	background-color: #000000;
-	color: white;
-}
+/* 1. Подключаем переменные (цвета, шрифты, отступы) */
+@import './abstracts/variables';
 
-.container {
-	max-width: 1248px;
-	padding: 24px;
-	margin: 0 auto;
-}
+/* 2. Подключаем шрифты */
+@import './base/fonts';
 
-.main {
-	&__container {
-		border: 1px solid #ffffff;
-	}
-
-	&__inner {
-		text-align: center;
-	}
-}
+/* 3. Подключаем базовые стили (body, container и т.д.) */
+@import './base/base';

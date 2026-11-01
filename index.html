@@ -1,21 +1,47 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="./src/styles/style.scss" />
-		<title>Verda</title>
-	</head>
-	<body>
-		<div id="app">
-			<main class="main">
-				<div class="main__container container">
-					<div class="main__inner">
-						<h1 class="main__title">Verda!</h1>
-					</div>
-				</div>
-			</main>
-		</div>
-	</body>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verda - Fresh Grocery</title>
+</head>
+<body>
+
+  <!-- Шапка сайта -->
+  <header class="header">
+    <div class="container header__container">
+      <!-- Логотип -->
+      <a href="#" class="header__logo">verda</a>
+
+      <!-- Меню навигации -->
+      <nav class="header__nav">
+        <a href="#" class="header__link">Catalog</a>
+        <a href="#" class="header__link">About</a>
+        <a href="#" class="header__link">Delivery</a>
+      </nav>
+
+      <!-- Кнопки и иконки справа -->
+      <div class="header__actions">
+        <!-- Иконка поиска -->
+        <img src="/src/icons/search.svg" alt="Search" class="header__icon" />
+        
+        <!-- Иконка профиля -->
+        <img src="/src/icons/user.svg" alt="User" class="header__icon" />
+        
+        <a href="#" class="header__link">Sign up</a>
+        <a href="#" class="btn btn--primary">Log in</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Основной контент -->
+  <main>
+    <div class="container">
+      <h1>Fresh Grocery</h1>
+    </div>
+  </main>
+
+  <script type="module" src="/src/main.js"></script>
+
+</body>
 </html>
