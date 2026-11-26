@@ -7,39 +7,243 @@
 </head>
 <body>
 
-  <!-- Шапка сайта -->
-  <header class="header">
-    <div class="container header__container">
-      <!-- Логотип -->
-      <a href="#" class="header__logo">verda</a>
+  <div class="page">
 
-      <!-- Меню навигации -->
-      <nav class="header__nav">
-        <a href="#" class="header__link">Catalog</a>
-        <a href="#" class="header__link">About</a>
-        <a href="#" class="header__link">Delivery</a>
-      </nav>
+    <!-- ХЕДЕР (с правильными классами) -->
+    <header class="header">
+        <div class="container header__container">
+            
+            <!-- ДОБАВИЛИ КНОПКУ БУРГЕРА (видна только на мобилках) -->
+            <button class="header__burger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-      <!-- Кнопки и иконки справа -->
-      <div class="header__actions">
-        <!-- Иконка поиска -->
-        <img src="/src/icons/search.svg" alt="Search" class="header__icon" />
-        
-        <!-- Иконка профиля -->
-        <img src="/src/icons/user.svg" alt="User" class="header__icon" />
-        
-        <a href="#" class="header__link">Sign up</a>
-        <a href="#" class="btn btn--primary">Log in</a>
+            <a href="#" class="header__logo">verda</a>
+
+            <nav class="header__nav">
+                <a href="#" class="header__link">Catalog</a>
+                <a href="#" class="header__link">About</a>
+                <a href="#" class="header__link">Delivery</a>
+            </nav>
+
+            <div class="header__actions">
+                <a href="#" class="header__link">
+                    <svg class="header__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    <span>Sign in</span>
+                </a>
+                <a href="#" class="btn btn--primary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                    Cart
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO BANNER -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-banner">
+                <div class="hero-content">
+                    <h1>Fresh Blueberry</h1>
+                    <p>Delicious food, no plastic. Just pure taste and clean conscience.</p>
+                    <a href="#" class="btn-primary">Shop now</a>
+                </div>
+
+                <button class="slider-arrow left-arrow">&#10094;</button>
+                <button class="slider-arrow right-arrow">&#10095;</button>
+                
+                <div class="slider-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- СЕКЦИЯ ТОВАРОВ -->
+    <section class="products-section">
+        <div class="container">
+            
+            <div class="section-header">
+                <h2>Shop The Latest</h2>
+                <p>Our freshest arrivals — straight from the farm this week. Grass-fed meats, free-range eggs, handcrafted cheeses, and more, all sustainably raised and packed with care.</p>
+                <a href="#" class="view-all-link">View All &rarr;</a>
+            </div>
+
+            <!-- Карточки товаров -->
+            <div class="products-grid">
+                <!-- Тут твой код карточек (он правильный, оставляем как есть) -->
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="/src/images/eggs_basket.png" alt="Farmed chicken eggs">
+                        <span class="badge">-10%</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Farmed chicken eggs</h3>
+                        <p class="product-weight">10 pieces</p>
+                        <div class="product-bottom">
+                            <div class="price-pill">
+                                <span class="old-price">$3.11</span>
+                                <span class="current-price">$2.23</span>
+                                <button class="add-btn">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-image has-quantity">
+                        <img src="/src/images/chicken_breast_fillet.png" alt="Chicken breast fillet">
+                        <div class="quantity-badge">1</div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Chicken breast fillet</h3>
+                        <p class="product-weight">700 g</p>
+                        <div class="product-bottom">
+                            <div class="price-pill in-cart">
+                                <button class="remove-btn">−</button>
+                                <span class="current-price">$2.23</span>
+                                <button class="add-btn">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="/src/images/processed_cheese.png" alt="Processed cheese">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Processed cheese</h3>
+                        <p class="product-weight">250 g</p>
+                        <div class="product-bottom">
+                            <div class="price-pill">
+                                <span class="current-price">$2.23</span>
+                                <button class="add-btn">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="/src/images/lukhovitsky_cucumbers.png" alt="Lukhovitsky cucumbers">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Lukhovitsky cucumbers</h3>
+                        <p class="product-weight">500 g</p>
+                        <div class="product-bottom">
+                            <div class="price-pill">
+                                <span class="current-price">$2.23</span>
+                                <button class="add-btn">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="/src/images/young_potatoes.png" alt="Young potatoes">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Young potatoes</h3>
+                        <p class="product-weight">500 g</p>
+                        <div class="product-bottom">
+                            <div class="price-pill">
+                                <span class="current-price">$2.23</span>
+                                <button class="add-btn">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="/src/images/blueberry.png" alt="Blueberry">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Blueberry</h3>
+                        <p class="product-weight">125 g</p>
+                        <div class="product-bottom">
+                            <div class="price-pill">
+                                <span class="current-price">$2.23</span>
+                                <button class="add-btn">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card out-of-stock">
+                    <div class="product-image">
+                        <img src="/src/images/curd_cheesecakes.png" alt="Curd cheesecakes">
+                        <div class="overlay-container">
+                            <div class="quantity-badge large">2</div>
+                            <div class="out-of-stock-text">No more</div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Curd cheesecakes</h3>
+                        <p class="product-weight">5 pieces</p>
+                        <div class="product-bottom">
+                            <div class="price-pill in-cart">
+                                <button class="remove-btn">−</button>
+                                <span class="current-price">$2.23</span>
+                                <button class="add-btn" disabled>+</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="/src/images/cookies_nuts_condensed_milk.png" alt="Cookies Nuts with boiled condensed milk">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Cookies Nuts with boiled condensed milk</h3>
+                        <p class="product-weight">250 g</p>
+                        <div class="product-bottom">
+                            <div class="price-pill">
+                                <span class="current-price">$2.23</span>
+                                <button class="add-btn">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- ФУТЕР -->
+    <footer class="footer">
+      <div class="container footer__container">
+        <div class="footer__left">
+          <a href="#" class="footer__logo">verda</a>
+          <div class="footer__socials">
+            <a href="#" class="footer__social-link">
+              <img src="/src/icons/telegram.svg" alt="Telegram" class="footer__icon" /> Telegram
+            </a>
+            <a href="#" class="footer__social-link">
+              <img src="/src/icons/user.svg" alt="Habr" class="footer__icon" /> Habr
+            </a>
+            <a href="#" class="footer__social-link">
+              <img src="/src/icons/youtube.svg" alt="YouTube" class="footer__icon" /> YouTube
+            </a>
+            <a href="#" class="footer__social-link">
+              <img src="/src/icons/headhunter.svg" alt="HeadHunter" class="footer__icon" /> HeadHunter
+            </a>
+          </div>
+        </div>
+        <div class="footer__right">
+          <p class="footer__copyright">© 2026 Verda. All rights reserved.</p>
+        </div>
       </div>
-    </div>
-  </header>
+    </footer>
 
-  <!-- Основной контент -->
-  <main>
-    <div class="container">
-      <h1>Fresh Grocery</h1>
-    </div>
-  </main>
+  </div>
 
   <script type="module" src="/src/main.js"></script>
 

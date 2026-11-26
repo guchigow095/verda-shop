@@ -6,3 +6,11 @@
 
 /* 3. Подключаем базовые стили (body, container и т.д.) */
 @import './base/base';
+
+/* 4. Подключаем стили для HERO-баннера */
+@import './components/hero';
+
+/* 4. Подключаем стили для section-products */
+@import './components/products';
+
+
